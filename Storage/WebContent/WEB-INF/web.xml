@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Storage</display-name>
+  <welcome-file-list>
+    <welcome-file>ProductView.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+    <description>JNDI reference to a data source</description>
+    <res-ref-name>jdbc/storage</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <servlet-name>ProductControl</servlet-name>
+    <servlet-class>it.unisa.ProductControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductControl</servlet-name>
+    <url-pattern>/product</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddToCart</servlet-name>
+    <servlet-class>it.unisa.AddToCart</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddToCart</servlet-name>
+    <url-pattern>/AddToCart</url-pattern>
+</servlet-mapping>
+  <servlet>
+    <servlet-name>RemoveFromCart</servlet-name>
+    <servlet-class>it.unisa.RemoveFromCart</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>RemoveFromCart</servlet-name>
+    <url-pattern>/RemoveFromCart</url-pattern>
+</servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateQuantity</servlet-name>
+    <servlet-class>it.unisa.UpdateQuantity</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>UpdateQuantity</servlet-name>
+    <url-pattern>/UpdateQuantity</url-pattern>
+</servlet-mapping>
+  <servlet>
+    <servlet-name>RegisterUser</servlet-name>
+    <servlet-class>it.unisa.RegisterUser</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>RegisterUser</servlet-name>
+    <url-pattern>/RegisterUser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>LoginUser</servlet-name>
+    <servlet-class>it.unisa.LoginUser</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>LoginUser</servlet-name>
+    <url-pattern>/LoginUser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>it.unisa.Logout</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+</servlet-mapping>
+  
+</web-app>
